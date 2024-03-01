@@ -23,6 +23,10 @@ class Car(
         return position
     }
 
+    fun currentPosition(): String{
+        return "-".repeat(this.position)
+    }
+
     fun getName(): String = this.name
     fun getPosition(): Int = this.position
 
