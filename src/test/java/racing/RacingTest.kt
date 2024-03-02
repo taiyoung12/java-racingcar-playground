@@ -125,8 +125,11 @@ class RacingTest {
     fun `최종 승리한 자동차는 position이 가장 높은 자동치 이다`(){
         val winner: Car = Car("TEST", 4, randomNumber)
         val looser: Car = Car( "TEST2", 1, randomNumber)
-        val losser2: Car = Car("TEST3", 3, randomNumber)
+        val looser2: Car = Car("TEST3", 3, randomNumber)
 
+        val cars: List<Car> = listOf(winner, looser, looser2)
+
+       assertThat(utils.judge(cars)).isEqualTo(winner)
     }
 
 }

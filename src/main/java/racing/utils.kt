@@ -8,5 +8,9 @@ class utils {
             return carNames.split(",").map { it.trim() }.filter { it.isNotEmpty() }
         }
 
+        fun judge(cars: List<Car>): Car? {
+            return cars.maxByOrNull { it.getPosition()}
+        }
+
     }
 }

@@ -23,5 +23,6 @@ fun main(args: Array<String>) {
         println("---------------")
     }
 
+    println("우승한 차는 " + utils.judge(cars)?.getName() + "입니다")
 }
 
